@@ -1,0 +1,40 @@
+@HostAddress = http://localhost:5093/provaJoao
+
+
+### Cadastro de aluno
+POST {{HostAddress}}/aluno/cadastrar
+Content-Type: application/json
+
+{
+    "Nome" : "felipe",
+    "Endereco" : "11/12/2003"
+}
+
+### Cadastro de imc
+POST {{HostAddress}}/imc/cadastrar
+Content-Type: application/json
+
+{
+    "peso" : 78,
+    "altura" : 17.7,
+    "alunoId" : 1
+}
+
+
+### Visualização dos imcs cadastrados
+GET {{HostAddress}}/imc/listar
+
+
+### Listar imc por aluno
+GET {{HostAddress}}/imc/listarporaluno
+
+
+### Atualização de imc
+PUT {{HostAddress}}/imc/alterar/1
+Content-Type: application/json
+
+{
+    "peso" : 92,
+    "altura" : 1.9,
+}
+
